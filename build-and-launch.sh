@@ -17,8 +17,8 @@ echo
 echo "Lancement du conteneur, veuillez patienter quelques minutes..."
 echo
 
-#CTR_ID=`docker run -d "$IMAGE_ID"`
-docker run -ti "$IMAGE_ID"
+CTR_ID=`docker run -d "$IMAGE_ID"`
+#docker run -ti "$IMAGE_ID"
 
 echo
 echo "Identifiant du conteneur: "

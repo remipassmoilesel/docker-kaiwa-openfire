@@ -2,6 +2,7 @@ extends layout
 
 block content
   section#loginbox.content.box
+
     .head
         h3 Connexion
 
@@ -19,6 +20,15 @@ block content
             button(type='button', tabindex='3', id='connexionButton', class="primary") Connexion
 
         div(id='errorMessage', style='margin: 10px; text-align: center; width: 100%; font-weight: bolder')
+
+        table(id='availablesAccounts', style="margin: 20px; width: 100%;")
+            tr
+                th(colspan=2) Comptes disponibles
+            tr
+                th Login
+                th Mot de passe
+
+
 
 block scripts
     script(src="/config.js")

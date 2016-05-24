@@ -1,4 +1,27 @@
+
+$(function(){
+    // afficher les comptes disponibles
+    var appendToAccounts = function(name, elmt){
+        $('#availablesAccounts').append("<tr><td>" + (name || '') + "</td><td>" + elmt + "</td><tr/>");
+    };
+
+    appendToAccounts('admin', '*');
+    appendToAccounts('yohann', '*');
+    appendToAccounts('miguel', '*');
+    appendToAccounts('aurore', '*');
+    appendToAccounts('nicolas', '*');
+    appendToAccounts('david', '*');
+    appendToAccounts('jean', '*');
+    appendToAccounts('julescesar', '*');
+    appendToAccounts('kazoi', '*');
+    appendToAccounts('paul', '*');
+    appendToAccounts('zezette', '*');
+    appendToAccounts('compagnioncube', '*');
+})
+
 $('#connexionButton').click(function (e) {
+
+    // connexion
     var jid = $('#jid').val();
     if (SERVER_CONFIG.domain && jid.indexOf('@') == -1)
          jid += "@" + SERVER_CONFIG.domain;
