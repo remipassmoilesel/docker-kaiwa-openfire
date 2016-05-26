@@ -25,7 +25,6 @@ $('#connexionButton').click(function (e) {
     var jid = $('#jid').val();
     if (SERVER_CONFIG.domain && jid.indexOf('@') == -1)
          jid += "@" + SERVER_CONFIG.domain;
-    var password = $('#password').val();
 
     if(typeof SERVER_CONFIG.wss === "undefined"){
         $("#errorMessage").html("Erreur de configuration. Voir le fichier dev_config.json");
@@ -51,7 +50,7 @@ $('#connexionButton').click(function (e) {
         boshURL: boshURL,
         transport: transport,
         credentials: {
-            password: password
+            password: "azerty"
         }
     });
 
